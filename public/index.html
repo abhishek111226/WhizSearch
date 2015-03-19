@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+ <style>
+ul li{
+ font-size:20px;
+}
+#details 
+{
+    position:relative;
+    margin-top: 10px;
+    padding-right: 19px; 
+    background:white;
+    width: 45%;
+    height : 20%;
+    border: 1px solid white;
+    margin-left: 10%
+    
+}
+#steps
+{
+	   margin-top: -10%;
+	   margin-left: 60%;
+ 	   height:20%;
+	   width: 25%;
+	   background:white;	
+	   min-height:100px; 
+}
+#input{
+	width: 75%;
+    height: 400px;
+    background: white;
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-right: 10%;
+    padding-top:10px;
+    padding-bottom:3%;
+    padding-right: 2px;
+}
+#name {
+    position: fixed;
+    top: 10px;
+    left: 5px;
+    background-color:black;
+    color:white;
+    text-align:center;
+     width=100%
+     hight=100px	 
+	float : right
+}
+#logo
+{
+	background-image: url("img/weblogo.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	min-height:250px;
+	min-width:250px;
+	
+}
+
+ </style>
+
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+       
+
+        <link href="data:image/gif;" rel="icon" type="image/x-icon" />
+
+        <!-- Bootstrap -->
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="example/css/style.css" />
+     
+        <link rel="screenshot" itemprop="screenshot" href="http://katspaugh.github.io/wavesurfer.js/example/screenshot.png" />
+
+        <!-- wavesurfer.js -->
+        <script src="src/wavesurfer.js"></script>
+        <script src="src/util.js"></script>
+        <script src="src/webaudio.js"></script>
+       
+        <script src="src/drawer.js"></script>
+        <script src="src/drawer.canvas.js"></script>
+	  <script src="example/main.js"></script>
+        <script src="example/trivia.js"></script>
+        <!-- regions plugin -->
+        <script src="plugin/wavesurfer.regions.js"></script>
+	  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	
+        <!-- Demo -->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>WhizSearch</title>
+
+	
+<script src="js/recorderjs/recorder.js"></script>
+	<script src="js/main.js"></script>
+	<style>
+	html {
+    overflow-y: scroll; 
+}
+	
+	#reccontrols {
+		border: 1px solid white;
+		position:relative;
+		height: 290px;
+		width: 441px;
+		float : left;
+		margin-left : 60%;
+		margin-top : -110px;
+		margin-right:10%;
+    		
+	}
+	#record { height: 32vh;width=90%;padding-left:20%;padding-top:1.5%;margin-top:-7%}
+	#record.recording { 
+		background: red;
+		background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+		background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+		background: radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+	}
+	</style>
+
+		
+
+    </head>
+
+    <body background="img/bg.jpg"> 
+ 
+	<div id="details">
+		<div id="logo">
+		</div>
+		<h2>From Tune to Youtube</h2>	
+	</div>
+	<div id="steps">
+		<h1>Just 3 steps to go</h1>	
+			<ul style="list-style-type:circle">
+  			<li>Input audio</li>
+  			<li>Get Notations</li>
+  			<li>Song name and Youtube link</li>
+			</ul>  
+	</div>
+	
+
+
+
+	<div id="input">
+		<h2 style="margin-left:10%;">Drop your whistled file here !</h2>
+		<h2 style="margin-left:49%;margin-top:-49px;"><I>OR</I></h2>
+		<h2 style="margin-left: 60%;margin-top:-47px;">Click on mic to start/stop recording</h2>
+		<br>
+		<p  class="lead pull-down" id="drop">
+			File Input box 
+                		
+            </p>
+		 <img src="img/tabla.jpg" alt="Smiley face" width="40%" height="70%" hspace="90px"></img> 
+		
+		<hr width="5" size="140" style="margin-top:-170px;"></hr>
+		
+		<div id="reccontrols">
+			<img id="record"  src="img/micwithstand.jpg" onclick="toggleRecording(this);">
+		
+			</img>
+		</div>
+	</div>
+	
+
+	
+        <div class="container">
+	  <style>	
+ 	  float : left;		
+	  </style>
+
+        <div id="demo">
+                <div id="waveform">
+                    <div class="progress progress-striped active" id="progress-bar">
+                        <div class="progress-bar progress-bar-info"></div>
+                    </div>
+
+                    <!-- Here be the waveform -->
+                </div>
+                <div class="controls">
+                    
+                    <button class="btn btn-primary" data-action="play">
+                        <i class="glyphicon glyphicon-play"></i>
+                        Play
+                        /
+                        <i class="glyphicon glyphicon-pause"></i>
+                        Pause
+                    </button>
+
+                    
+                    
+                </div>
+         </div>
+         </div>
+	    
+    </body>
+</html>
